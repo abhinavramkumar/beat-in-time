@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Lato')
+@import url('https://fonts.googleapis.com/css?family=Kalam')
+
+@font-face
+  font-family: Air
+  src: url(./fonts/AIR.TTF)
+
+@font-face
+  font-family: Diskoteque
+  src: url(./fonts/DISKOTEQUE.TTF)
+
+@font-face
+  font-family: Extref
+  src: url(./fonts/extref.ttf)
+
+@font-face
+  font-family: HangTheDj
+  src: url(./fonts/HANGTHEDJ.ttf)
+
+@font-face
+  font-family: SoundSample
+  src: url(./fonts/Sound-Sample.ttf)
+
+@font-face
+  font-family: ThunderLord
+  src: url(./fonts/Thunder-Lord.ttf)
+
+$lightgrey: #d6d3bf
+$mediumaquamarine: #6ac4cd
+$steelblue: #417dba
+$steelgreen: #3a9399
+$purple: #7d0250
+$darkviolet: #7718bd
+$darkslategrey: $purple
+$sandybrown: #e4a66c
+
+
+$kalam: 'Kalam', cursive
+$lato: 'Lato', sans-serif
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  font-family: $lato
+
+html
+  font-family: $lato
+  font-size: 18px
+
+body
+  font-size: 1rem
+  font-family: $lato
+
+.container
+  width: 95%
+  margin: 0 auto
+  height: 100%
+
+.App
+  background-image: url('../img/music-alt.jpg')
+  background-size: 120%
+  background-position: 0 -20px
+
+.Header
+  height: 5rem
+  color: white
+
+.Header__container
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: inherit
+
+.Header__brand
+  flex-basis: 300px
+  margin-bottom: 0px
+  font-family: ThunderLord
+  font-size: 3rem
+  font-weight: 700
+  color: orange
+
+.Header__details
+  flex-basis: 400px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 0px
+  p
+    margin-bottom: 0px
+
+.BpmDashboard
+  padding: 0
+  height: calc(100vh - 5rem)
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+.BpmDashboard__container
+  width: 50%
+  margin: 0 auto
+  background-color: #ccc
+  height: 500px
+  padding: 2rem
+  border-radius: 4px
+  box-shadow: 0px 2px 7px 3px rgba(#000,0.25)
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  position: relative
+
+.BpmDashboard__refresh
+  position: absolute
+  right: 5%
+  top: 5%
+  cursor: pointer
+  color: $purple
+
+.BpmDashboard__display
+  height: 150px
+  font-size: 5rem
+  font-weight: 700
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: 2rem
+  color: $darkslategrey
+
+.BpmDashboard__metadata
+  padding: 1rem 0
+  margin-bottom: 2rem
+  display: flex
+  align-items: center
+  justify-content: center
+  p
+    font-size: 1.25rem
+    color: $darkviolet
+  svg
+    color: $darkviolet
+    margin-right: 1rem
+    animation: beat 1s linear infinite
+
+
+.BpmDashboard__button
+  border: 1px solid $darkslategrey
+  background-color: $darkslategrey
+  color: white
+  width: 100%
+  height: 100px
+  margin: 0
+  padding: 0 1rem
+  border-radius: 10px
+  font-size: 1.25rem
+  box-shadow: 0px 2px 7px 2px rgba(#000,0.25)
+  transition: all 100ms ease-in-out
+  cursor: pointer
+  &:hover
+    box-shadow: 0px 1px 2px 1px rgba(#000,0.25)
+  svg
+    margin-right: 1rem
+    
+
+@keyframes beat
+  0%
+    transform: scale(0.9)
+  50%
+    transform: scale(1.2)
+  100%
+    transform: scale(0.9)
+
+  
